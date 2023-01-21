@@ -6,3 +6,5 @@ server:
     threads:
       max: 50  # 200 in production
       min-spare: 5 # 10 in production
+polar:
+  greeting: Welcome to the local book catalog!
