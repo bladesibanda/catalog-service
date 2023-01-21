@@ -39,7 +39,7 @@ public class BookService {
                             book.title(),
                             book.author(),
                             book.price(),
-                            "Manning Publishers",
+                            existingBook.publisher(),
                             existingBook.createdDate(),
                             existingBook.lastModifiedDate(),
                             existingBook.version()
