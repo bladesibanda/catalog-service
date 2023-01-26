@@ -9,8 +9,11 @@ RUN useradd spring
 USER spring
 WORKDIR workspace
 COPY --from=builder workspace/dependencies/ ./
+RUN true
 COPY --from=builder workspace/spring-boot-loader/ ./
+RUN true
 COPY --from=builder workspace/snapshot-dependencies/ ./
+RUN true
 COPY --from=builder workspace/application/ ./
 
 ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
