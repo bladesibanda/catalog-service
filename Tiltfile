@@ -3,7 +3,7 @@ custom_build(
     # Name of the container image
     ref = 'catalog-service',
     # Command to build the container image
-    command = '../../gradlew bootJar &&  docker build -t $EXPECTED_REF .',
+    command = './gradlew bootJar &&  docker build -t $EXPECTED_REF .',
     # Files to watch that trigger a new build
     deps = ['build.gradle', 'src']
 )

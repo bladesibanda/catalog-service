@@ -68,7 +68,7 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew bootJar 
-          docker build -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }} .
+          docker build . --file Dockerfile -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
       - name: OCI image vulnerability scanning
         uses: anchore/scan-action@v3
         id: scan

@@ -23,12 +23,12 @@ ext {
     set('testcontainersVersion', "1.17.6")
 }
 
-bootRun {
-    systemProperty 'spring.profiles.active', 'testdata'
-}
-
 jar {
     enabled = false
+}
+
+bootRun {
+    systemProperty 'spring.profiles.active', 'testdata'
 }
 
 dependencies {
